@@ -686,3 +686,17 @@ input:not(:placeholder-shown):invalid {
   .star {
 	color: goldenrod;
   }
+
+  .costumize-drink {
+	background-color: var(--medium);
+	padding-block-end: 3em;
+  }
+
+  .costumize-drink .bg-image {
+	background-image: url('./images/025.png');
+	background-size: contain;
+  }
+
+  .extras .img-round {
+	transform: scale(2);
+  }
