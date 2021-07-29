@@ -166,7 +166,7 @@ body > * {
 }
 
 header, .footer {
-  padding-block: var(--line-h);
+  padding-block: calc(var(--line-h)/2);
 }
 
 
@@ -384,6 +384,8 @@ hr {
   background-color: var(--bg-color);
   min-height: calc(var(--line-h)*3);
   position: sticky;
+  opacity: 98%;
+  z-index: 1;
   top: 0;
 }
 
@@ -660,10 +662,9 @@ input:not(:placeholder-shown):invalid {
   .h1 {
 	background-color: var(--medium);
    background-image: url("./images/hero.png");
-   background-size: 200%;
+   background-size: 205%;
    background-position: 45% 100%;
    margin-block: 0;
-   min-height: calc(var(--line-h)*15);
   }
 
   .h1 .text {
@@ -674,3 +675,6 @@ input:not(:placeholder-shown):invalid {
 	max-width: 20em;
   }
 
+  .flex:not(.links) {
+	padding-block-start: calc(var(--line-h)*4);
+  }
