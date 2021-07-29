@@ -2,6 +2,7 @@
   --line-h: 1.5em;
   --padding: 1.5em;
   --gap: calc(var(--line-h)*2);
+  --gap-min: 0.5em;
   --radius: 1rem;
   --font-size: clamp(0.8rem, 1.25vw, 2.5rem);
   --letter-spacing: 0.25em;
@@ -26,14 +27,14 @@
 
 /* light-theme colors */
 :root {
-  --bg-color: whitesmoke;
-  --text: rgba(46, 49, 49, 1);
+  --bg-color: white;
+  --text:#1C1E1E;
   --text-70: rgba(46, 49, 49, 0.7);
   --text-contrast: var(--white);
-  --theme: mistyrose;
-  --medium: lavender;
+  --theme: #F1F8F6;
+  --medium: #D4E9E2;
   --contrast: lightsteelblue;
-  --accent: orangered;
+  --accent: #006341;
   --white: white;
   --black: rgba(46, 49, 49, 1);
   --shadow: 0 0.25vw 1vw  0 rgba(0,0,0,0.2);
@@ -305,6 +306,12 @@ hr {
   flex-wrap: wrap;
 }
 
+.flex-inline {
+  display: flex;
+  align-items: center;
+}
+
+
 .flex > * > * {
   margin-block-start: 0;
 }
@@ -390,7 +397,7 @@ hr {
 }
 
 .logo .img {
-  height: var(--line-h);
+  height: calc(var(--line-h)*2);
 }
 
 .logo .img img {
@@ -581,6 +588,10 @@ input:not(:placeholder-shown):invalid {
   padding: var(--padding);
 }
 
+.gap-min {
+  gap: var(--gap-min);
+}
+
 .radius {
   border-radius: var(--radius);
   overflow: hidden;
@@ -626,6 +637,4 @@ input:not(:placeholder-shown):invalid {
 
 /* **************************************************************************
  *************************************************************************** */
-
-/* Site specific */
 
