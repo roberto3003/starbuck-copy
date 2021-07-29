@@ -1,5 +1,6 @@
 :root {
   --line-h: 1.5em;
+  --active: 1.1em;
   --padding: 1.5em;
   --gap: calc(var(--line-h)*2);
   --gap-min: 0.5em;
@@ -33,6 +34,7 @@
   --text-contrast: var(--white);
   --theme: #F1F8F6;
   --medium: #D4E9E2;
+  --medium2: #F3F1E7;
   --contrast: lightsteelblue;
   --accent: #006341;
   --white: white;
@@ -456,7 +458,7 @@ nav li:not(.logo, .button, .active):hover, .active {
 }
 
 nav .active:not(.footer .active) {
-  font-size: 1.1em;
+  font-size: var(--active); 
 }
 
 
@@ -677,10 +679,15 @@ input:not(:placeholder-shown):invalid {
   .get-favorites {
 	background-color: var(--theme);
 	padding-block: var(--line-h);
+	--active: 2.2em;
   }
 
   .get-favorites li {
 	font-size: 2em;
+  }
+
+  .get-favorites li .active {
+	font-size: initial;
   }
 
   .star {
@@ -700,3 +707,13 @@ input:not(:placeholder-shown):invalid {
   .extras .img-round {
 	transform: scale(2);
   }
+
+  .rewards {
+	background-color: var(--medium2);
+	padding-block: var(--line-h);
+  }
+
+  .stars > * {
+	align-items: baseline;
+  }
+
