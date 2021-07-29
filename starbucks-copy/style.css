@@ -256,12 +256,6 @@ hr {
   right: auto;
 }
 
-.header {
-  background-color: var(--theme);
-  min-height: calc(var(--line-h)*3);
-}
-
-
 .hero {
   background-image: url('./images/hero-desktop.jpg');
   background-size: cover;
@@ -386,13 +380,19 @@ hr {
 
 /* Navigation */
 
+.header {
+  background-color: var(--theme);
+  min-height: calc(var(--line-h)*3);
+  position: sticky;
+  top: 0;
+}
+
 .main-nav {
   align-items: center;
   gap: 0;
 }
 
 .logo {
-  margin-inline-end: auto;
   padding-inline-start: 0;
 }
 
@@ -403,6 +403,10 @@ hr {
 .logo .img img {
   height: 100%;
 }
+
+  .separator {
+	margin-inline-end: auto;
+  }
 
 .main-nav .links {
   gap: 1em;
@@ -415,12 +419,15 @@ hr {
 }
 
 
-@media only screen and (max-width: 25em) {
+@media only screen and (max-width: 30em) {
+  .header {
+	position: initial;
+  }
   .main-nav  .links  {
 	flex-direction: column;
 	align-items: center;
   }
-  .logo {
+  .separator {
 	margin-inline: auto;
   }
 }
@@ -448,6 +455,14 @@ nav .active:not(.footer .active) {
 }
 
 
+nav .cta {
+  background-color: var(--text);
+  border: 0.1em solid var(--text);
+}
+
+nav .cta:hover {
+  background-color: var(--text-70);
+}
 
 /* Buttons and CTA */
 /* <div class="button cta"><a href="">Start for Free</a></div> */
@@ -635,6 +650,9 @@ input:not(:placeholder-shown):invalid {
   }
 
 
-/* **************************************************************************
- *************************************************************************** */
+  /* **************************************************************************
+   *************************************************************************** */
 
+  .header {
+	background-color: transparent;
+  }
