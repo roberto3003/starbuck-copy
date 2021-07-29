@@ -305,9 +305,8 @@ hr {
   align-items: center;
 }
 
-
-.flex > * > *:not(p) {
-  margin-block-start: 0;
+.flex:not(.links) {
+  padding-block-start: calc(var(--line-h)*2);
 }
 
 .column {
@@ -675,6 +674,3 @@ input:not(:placeholder-shown):invalid {
 	max-width: 20em;
   }
 
-  .flex:not(.links) {
-	padding-block-start: calc(var(--line-h)*4);
-  }
