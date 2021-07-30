@@ -129,12 +129,27 @@
 
 		 /* Vertical rhythm */
 		 body > *:not(header, main), main > * {
-		   margin-block-start: calc(var(--line-h)*6);
+		   margin-block-start: calc(var(--line-h)*2);
+		   padding-block: calc(var(--line-h)*2);
 		 }
-		
-* + h2, * + h3, * + h4 {
-  margin-block-start: var(--line-h);
-}
+
+		 h1, h2, h3, h4 {
+		   margin-block-start: 2em;
+		   margin-block-end: 1em;
+		 }
+
+		 @media only screen and (max-width: 50em) {
+		   body > *:not(header, main), main > * {
+			 margin-block-start: calc(var(--line-h)*0);
+			 padding-block: calc(var(--line-h)*1);
+		   }
+
+		   h1, h2, h3, h4 {
+			 margin-block-start: 0;
+			 margin-block-end: 0;
+	}
+  }
+
 
 
 /* Make images easier to work with */
@@ -167,7 +182,7 @@ body > * {
   width: 100%;
 }
 
-header, .footer {
+.footer {
   padding-block: calc(var(--line-h)/2);
 }
 
@@ -188,10 +203,6 @@ h4 {
   font-size: 1em;
 }
 
-h1, h2, h3, h4 {
-  margin-block-start: 2em;
-  margin-block-end: 1em;
-}
 
 p {
   max-width: 60em;
@@ -343,6 +354,12 @@ hr {
   flex-wrap: wrap-reverse;
 }
 
+  @media only screen and (max-width: 50em) {
+	.flex, .grid {
+	  gap: var(--gap-min);
+	}
+  }
+
 
 /* Centering */
 ..flex-center {
@@ -393,6 +410,7 @@ hr {
 @media only screen and (max-width: 50em) {
   .header {
 	position: initial;
+	padding-block: calc(var(--line-h)*2);
   }
 }
 
@@ -709,7 +727,8 @@ input:not(:placeholder-shown):invalid {
   }
 
   .extras .img-round {
-	transform: scale(2);
+	height: calc(var(--line-h)*4);
+	width: calc(var(--line-h)*4);
   }
 
   .rewards {
@@ -743,11 +762,10 @@ input:not(:placeholder-shown):invalid {
 	background-color: var(--medium2);
   }
 
-
-  /* Vertical rhythm */
-  body > *:not(header, main), main > * {
-	margin-block-start: calc(var(--line-h)*4);
-	padding-block: calc(var(--line-h)*2);
+@media only screen and (max-width: 50em) {
+.codes .button {
+	margin-block-start: var(--line-h);
   }
+}
 
 
