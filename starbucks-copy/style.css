@@ -568,7 +568,7 @@ nav .cta:hover {
   margin-block-start: calc(var(--line-h)*2);
 }
 
-.summaries hr {
+.summaries hr, .footer hr {
   margin: 0;
   border-style: inset;
   border-width: 1px;
@@ -682,6 +682,10 @@ input:not(:placeholder-shown):invalid {
   /* **************************************************************************
    *************************************************************************** */
 
+  h1 {
+	text-transform: uppercase;
+  }
+
   .h1 {
 	background-color: var(--medium);
    background-image: url("./images/hero.png");
@@ -768,4 +772,6 @@ input:not(:placeholder-shown):invalid {
   }
 }
 
-
+.footer {
+  background-color: var(--bg-color);
+}
