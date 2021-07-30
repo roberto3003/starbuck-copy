@@ -739,3 +739,15 @@ input:not(:placeholder-shown):invalid {
 	height: calc(var(--line-h)*8);
   }
 
+  .legal {
+	background-color: var(--medium2);
+  }
+
+
+  /* Vertical rhythm */
+  body > *:not(header, main), main > * {
+	margin-block-start: calc(var(--line-h)*4);
+	padding-block: calc(var(--line-h)*2);
+  }
+
+
