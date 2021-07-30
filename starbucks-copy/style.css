@@ -713,7 +713,12 @@ input:not(:placeholder-shown):invalid {
 	padding-block: var(--line-h);
   }
 
-  .stars > * {
-	align-items: baseline;
+  .stars {
+	align-items: start;
   }
+
+  .stars-h4 {
+	flex-wrap: nowrap;
+  }
+
 
