@@ -196,7 +196,7 @@ h1, h2, h3, h4 {
 p {
   max-width: 60em;
   margin: 0;
-  margin-block-start: var(--line-h);
+  margin-block: var(--line-h);
   word-spacing: var(--letter-spacing);
 }
 
@@ -487,6 +487,10 @@ nav .cta:hover {
 .button:not(input) {
   margin-block-start: calc(var(--line-h)*1);
   margin-inline: auto;
+}
+
+.button input {
+  margin-inline-start: 1em;
 }
 
 .button > * {
