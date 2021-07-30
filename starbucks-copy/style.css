@@ -183,7 +183,7 @@ body > * {
 }
 
 .footer {
-  padding-block: calc(var(--line-h)/2);
+  padding-block: calc(var(--line-h)*2);
 }
 
 
