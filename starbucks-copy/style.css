@@ -721,4 +721,11 @@ input:not(:placeholder-shown):invalid {
 	flex-wrap: nowrap;
   }
 
+  .stars-h4 h4 {
+	margin-block-start: 0;
+  }
+
+  .stars-h4-img {
+	height: calc(var(--line-h)*8);
+  }
 
