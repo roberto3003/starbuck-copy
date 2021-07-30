@@ -717,6 +717,12 @@ input:not(:placeholder-shown):invalid {
 	align-items: start;
   }
 
+  .stars hr {
+	border-width: 1px;
+    border-style: inset;
+    margin-block: calc(var(--line-h)*2);
+  }
+
   .stars-h4 {
 	flex-wrap: nowrap;
   }
