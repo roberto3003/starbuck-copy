@@ -577,10 +577,10 @@ input {
   border: 0.1em solid var(--text);
   min-height: calc(var(--line-h)*1.5);
 }
-
-input[type="email" i] {
+input[type="text" i], input[type="email" i], input[type="number" i],  input[type="password" i]   {
   min-width: 18em;
   padding-inline: var(--line-h);
+  border-width: 1px;
 }
 
 input:not(:placeholder-shown):invalid {
