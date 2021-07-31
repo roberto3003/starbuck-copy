@@ -130,7 +130,6 @@
 
 		 /* Vertical rhythm */
 		 body > *:not(header, main), main > * {
-		   margin-block-start: calc(var(--line-h)*2);
 		   padding-block: calc(var(--line-h)*2);
 		 }
 
@@ -141,7 +140,6 @@
 
 		 @media only screen and (max-width: 50em) {
 		   body > *:not(header, main), main > * {
-			 margin-block-start: calc(var(--line-h)*0);
 			 padding-block: calc(var(--line-h)*1);
 		   }
 
@@ -182,11 +180,6 @@ body {
 body > * {
   width: 100%;
 }
-
-.footer {
-  padding-block: calc(var(--line-h)*2);
-}
-
 
 h1 {
   font-size: 2.5em;
@@ -451,6 +444,7 @@ hr {
   place-items: center;
   display: grid;
   padding: 0.5em;
+  margin-block: 0;
 }
 
 .main-nav nav li:not(.logo, .button, .active):hover, .active {
@@ -463,6 +457,7 @@ hr {
 
 .main-nav .button {
   margin: 0;
+  padding-block: 0;
 }
 
 
@@ -634,6 +629,10 @@ input:not(:placeholder-shown):invalid {
   align-items: start;
 }
 
+.bg-colored {
+  padding-block: var(--line-h);
+}
+
 .shadow {
   box-shadow: var(--shadow);
 }
@@ -716,9 +715,12 @@ input:not(:placeholder-shown):invalid {
 	max-width: 20em;
   }
 
+  .favorite-drinks {
+	padding-block: 0;
+  }
+
   .get-favorites {
 	background-color: var(--theme);
-	padding-block: var(--line-h);
 	--active: 2.2em;
   }
 
@@ -736,7 +738,6 @@ input:not(:placeholder-shown):invalid {
 
   .costumize-drink {
 	background-color: var(--medium);
-	padding-block-end: 3em;
   }
 
   .costumize-drink .bg-image {
@@ -751,7 +752,6 @@ input:not(:placeholder-shown):invalid {
 
   .rewards {
 	background-color: var(--medium2);
-	padding-block: var(--line-h);
   }
 
   .stars {
@@ -788,3 +788,4 @@ input:not(:placeholder-shown):invalid {
 .footer {
   background-color: var(--bg-color);
 }
+
