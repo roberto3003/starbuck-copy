@@ -71,7 +71,8 @@
   h2,
   h3,
   h4,
-  p {
+  p,
+  li {
 	line-height: var(--line-h);
 	word-break: break-word;
   }
@@ -211,6 +212,11 @@ p {
   word-spacing: var(--letter-spacing);
 }
 
+li {
+  margin-block: 0;
+  margin-block-start: calc(var(--line-h)/2);
+}
+
 a {
   text-decoration:none;
   color: var(--text);
@@ -221,7 +227,7 @@ a:visited, a:active {
 }
 
 
-p a {
+p a, li a {
   color: var(--text);
   text-decoration: underline;
   text-decoration-thickness: from-font;
@@ -249,7 +255,7 @@ form {
 }
 
 hr {
-  margin-block-end: calc(var(--line-h)*3);
+  margin-block-start: calc(var(--line-h)*3);
   border:unset;
 }
 
@@ -441,6 +447,20 @@ hr {
   justify-content: flex-end;
 }
 
+.main-nav li {
+  place-items: center;
+  display: grid;
+  padding: 0.5em;
+}
+
+.main-nav nav li:not(.logo, .button, .active):hover, .active {
+  border-block-end: solid var(--accent);
+}
+
+.main-nav li a {
+  text-decoration: none;
+}
+
 .main-nav .button {
   margin: 0;
 }
@@ -466,14 +486,9 @@ nav {
 }
 
 nav li {
-  display: grid;
-  place-items: center;
-  padding: 0.5em;
+  padding-block-start: 0.5em;
 }
 
-nav li:not(.logo, .button, .active):hover, .active {
-  border-block-end: solid var(--accent);
-}
 
 nav .active:not(.footer .active) {
   font-size: var(--active); 
@@ -654,7 +669,6 @@ input:not(:placeholder-shown):invalid {
 
   .footer .grid {
 	align-items: start;
-	min-height: calc(var(--line-h)*8);
   }
 
   .footer .grid > * > * {
@@ -747,7 +761,6 @@ input:not(:placeholder-shown):invalid {
   .stars hr {
 	border-width: 1px;
     border-style: inset;
-    margin-block: calc(var(--line-h)*2);
   }
 
   .stars-h4 {
